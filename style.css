@@ -1,0 +1,73 @@
+
+
+body {
+	background-color: #222222;
+	color: lightgray;
+	font-size: 28px;
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+#conteiner{
+	background-color: #333333;
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#board{
+	background-color: #222222;
+	width: 900px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 50px;
+	min-height: 60px;
+}
+
+#gallows{
+	background-color: #000000;
+	float: left;
+	width: 450px;
+	text-align: center;
+	min-height: 280px;
+}
+
+#abc{
+	
+	float: left;
+	width: 393;
+	text-align: center;
+	min-height: 280px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.latter{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid gray;
+	float: left;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+.latter:hover{
+	background-color: #222222;
+	color: white;
+	border: 3px solid white;
+}
+
+.reset{
+	text-align:center;
+	color:green;
+	cursor:pointer;	
+	font-size: 48px;
+}
+
+.reset:hover{
+	color:white;
+}
+
