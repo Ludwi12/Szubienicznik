@@ -1,5 +1,6 @@
-//41:22
-var pass = "abc";
+﻿
+	
+var pass = rand("pl");
 pass = pass.toUpperCase(); 								//funkcja zmieniajaca na wielkie litery
 
 var long = pass.length;										//zwracanie dlugosci string
@@ -25,9 +26,9 @@ function writePass() {
 	document.getElementById("board").innerHTML = pass_line;
 }
 
-window.onload = startGame;								//zdazenie po otwarciu okna, tylko alias 
+	window.onload = startGame;								//zdazenie po otwarciu okna, tylko alias 
 
-	var table_pl = new Array(35);							//tablica array
+		var table_pl = new Array(35);							//tablica array
 	table_pl[0]  = "A";
 	table_pl[1]  = "Ą";
 	table_pl[2]  = "B";
@@ -64,9 +65,10 @@ window.onload = startGame;								//zdazenie po otwarciu okna, tylko alias
 	table_pl[33] = "Ż";
 	table_pl[34] = "Ź";
 
-
-
 function startGame() {
+/*	pass = rand(lang);
+	pass = pass.toUpperCase();
+	long = pass.length; */
 	
 	var text_abc = "";
 	
@@ -134,15 +136,55 @@ function checkClick(nr){
 		
 		//wygrana
 		if (pass == pass_line){
-			document.getElementById("abc").innerHTML = "Wygrana! <br/> "+pass+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ!</span>';
+			document.getElementById("abc").innerHTML = "Wygrana! <br/> <p> "+pass.toString()+'<p /><br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ!</span>';
 			//location.reload resetuje skrypt
 		}
 		
 		if (loss >= 9){
-			document.getElementById("abc").innerHTML = "Przegrana :c <br/> "+pass+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ!</span>';
+			document.getElementById("abc").innerHTML = "Przegrana :c <br/> <p> "+pass.toString()+'<p /><br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ!</span>';
 		}
 		
-	}
+}
+
+function rand(langue){
+	
+	if (langue == "pl"){
+		var cytat_pl = new Array(10);
+		cytat_pl[0] = "Spędziłem większość życia, martwiąc się o rzeczy które nigdy się nie wydarzyły";
+		cytat_pl[1] = "Zwycięzcy robią to czego przegranym się nie chciało";
+		cytat_pl[2] = "Wielkie umysły mają cele inni mają życzenia";
+		cytat_pl[3] = "Zacznij tam gdzie jesteś, użyj tego co masz zrób co możesz";
+		cytat_pl[4] = "Statki w porcie są bezpieczne ale stanie w porcie nie jest ich przeznaczeniem";
+		cytat_pl[5] = "Wielkie wyniki wymagają wielkiego poświęcenia";
+		cytat_pl[6] = "Najmniejszy pagórek potrafi zasłonić nam widok na najwyższy szczyt";
+		cytat_pl[7] = "Gdybyśmy czekali na ten jeden moment kiedy wszystko, absolutnie wszystko jest gotowe nigdy byśmy nic nie zaczęli";
+		cytat_pl[8] = "Na początku jest to trudne ale na początku wszystko jest trudne";
+		cytat_pl[9] = "Przyszłość zaczyna się dzisiaj nie jutro";
+	
+		var rand_pl = Math.floor(Math.random()*10);
+		var cytat = cytat_pl[rand_pl];
+		return cytat;
+		} /*else if (langue == en){
+		var cytat_en = new Array(5);
+		cytat_en[0] = "Listen to many speak to a few";
+		cytat_en[1] = "The rest is silence";
+		cytat_en[2] = "Be to yourself as you would to your friend";
+		cytat_en[3] = "Time is waste of money";
+		cytat_en[4] = "Imagination is more important than knowledge";
+		
+		var rand_en = Math.floor(Math.random()*5);
+		var cytat = cytat_en[rand_en];
+		return cytat;
+	}*/
+}
 	
 	
+
+
+	
+
+
+	
+
+
 
